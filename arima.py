@@ -38,16 +38,6 @@ st.markdown(
 )
 
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stSettingsButton"] {display: none;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 
 # Load Data
 df = pd.read_csv("data/Quantity_data.csv")
