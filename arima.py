@@ -9,6 +9,45 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import joblib
 
+import streamlit as st
+
+import streamlit as st
+
+st.set_page_config(page_title="Your App", layout="wide",)
+
+st.markdown(
+    """
+    <style>
+        /* Override Streamlit Dark Theme */
+        :root {
+            --primary-background-color: white;
+            --secondary-background-color: white;
+            --text-color: black;
+            --font-family: 'Arial', sans-serif;
+        }
+        
+        /* Apply to entire body */
+        body {
+            background-color: var(--primary-background-color) !important;
+            color: var(--text-color) !important;
+            font-family: var(--font-family);
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stSettingsButton"] {display: none;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 # Load Data
 df = pd.read_csv("data/Quantity_data.csv")
@@ -348,3 +387,5 @@ st.sidebar.write("\n🔹Evaluation Scores🔹"
                     "\n\n **→  Weekly** RMSE: 714"
                     "\n\n **→  Monthly** RMSE: 851"
                     )
+
+
