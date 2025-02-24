@@ -11,7 +11,7 @@ import joblib
 
 
 # Load Data
-df = pd.read_csv(r"data\Quantity_data.csv")
+df = pd.read_csv("data/Quantity_data.csv")
 df_raw = df.copy()
 
 # Data Cleaning
